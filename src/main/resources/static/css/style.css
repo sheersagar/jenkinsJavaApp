@@ -11,7 +11,7 @@ body {
 .title {
     text-align: center;
     font-size: 48px;
-    color: #007bff;
+    color: #ffffff;
     text-shadow: 2px 2px #fff;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .footer {
-    background-color: lightgrey;
+    background-color: rgb(235, 43, 43);
     padding: 10px;
     display: flex;
     justify-content: space-between;
