@@ -9,4 +9,4 @@ WORKDIR /app
 COPY . /app
 
 EXPOSE 8080
-CMD ["java", "-jar","demoapp.jar"]
+ENTRYPOINT ["java", "-jar", "demoapp.jar"]
