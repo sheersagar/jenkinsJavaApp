@@ -17,7 +17,7 @@ pipeline {
 
         stage("Checkout from SCM") {
             steps {
-                git branch: 'main', changelog: false, credentialsId: 'git-hub-cred', poll: false, url: 'https://github.com/sheersagar/jenkinsJavaApp.git'
+                git branch: 'maint', changelog: false, credentialsId: 'git-cred', poll: false, url: 'https://github.com/sheersagar/jenkinsJavaApp.git''
             }
         } 
 
@@ -36,7 +36,7 @@ pipeline {
         stage("Sonar Qube Analysis") {
             steps {
                   script {
-                    withSonarQubeEnv(credentialsId: 'sonar-scanner') {
+                    withSonarQubeEnv(credentialsId: 'sonar-token') {
                     sh 'mvn sonar:sonar'
                   }
                 }
@@ -46,7 +46,7 @@ pipeline {
         stage("Build and Push Docker Image") {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'docker-cred') {
+                    withDockerRegistry(credentialsId: 'docker-token') {
                         docker.build("vishv3432/my_first_java_app:${BUILD_NUMBER}", ".")
                         
                         def dockerImage = docker.image('vishv3432/my_first_java_app:${BUILD_NUMBER}')
