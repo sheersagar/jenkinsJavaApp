@@ -7,6 +7,6 @@
 FROM eclipse-temurin:17.0.6_10-jdk
 WORKDIR /app
 COPY . /app
-RUN chmod +x /app/demoapp.jar
+RUN chmod +x /app/target/demoapp.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "demoapp.jar"]
