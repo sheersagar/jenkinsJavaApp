@@ -17,7 +17,7 @@ pipeline {
 
         stage("Checkout from SCM") {
             steps {
-                git branch: 'maint', changelog: false, credentialsId: 'git-cred', poll: false, url: 'https://github.com/sheersagar/jenkinsJavaApp.git''
+                git branch: 'main', changelog: false, credentialsId: 'git-cred', poll: false, url: 'https://github.com/sheersagar/jenkinsJavaApp.git''
             }
         } 
 
