@@ -4,3 +4,8 @@
 ---
 
 # This will be a very good project
+- item 1
+- item 2
+- item 3 
+
+* new item
