@@ -47,9 +47,8 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-token') {
-                        docker.build("vishv3432/my_first_java_app:${BUILD_NUMBER}", ".")
-                        
-                        def dockerImage = docker.image('vishv3432/my_first_java_app:${BUILD_NUMBER}')
+                        def imageName = "vishv3432/my_first_java_app:${BUILD_NUMBER}"
+                        def dockerImage = docker.build(imageName, ".")
                         dockerImage.push()
 
                     }
