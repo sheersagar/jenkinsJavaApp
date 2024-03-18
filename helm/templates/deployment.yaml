@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javaapp
+  labels:
+    app: java-app-spring-boot-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: java-app-spring-boot-app
+  template:
+    metadata:
+      labels:
+        app: java-app-spring-boot-app
+    spec:
+       containers:
+       - name: jforjava
+         image: vishv3432/my_first_java_app:12
+         ports:
+         - containerPort: 8080
