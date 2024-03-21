@@ -50,7 +50,7 @@ pipeline {
                         def imageName = "vishv3432/my_first_java_app:${BUILD_NUMBER}"
                         def dockerImage = docker.build(imageName, ".")
                         dockerImage.push()
-                        env.IMAGE_NAME = ${BUILD_NUMBER}
+                        env.IMAGE_NAME = "${BUILD_NUMBER}"
                     }
                 }
             }
