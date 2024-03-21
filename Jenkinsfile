@@ -51,6 +51,7 @@ pipeline {
                         def dockerImage = docker.build(imageName, ".")
                         dockerImage.push()
                         env.IMAGE_NAME = imageName
+                        
                     }
                 }
             }
