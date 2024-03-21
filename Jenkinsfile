@@ -51,7 +51,7 @@ pipeline {
                         def dockerImage = docker.build(imageName, ".")
                         dockerImage.push()
                         env.IMAGE_NAME = "${BUILD_NUMBER}"
-                        build job: 'CD-Pipeline', parameters: [string(name: 'IMAGE_NAME', value: env.IMAGE_NAME)]
+                        //build job: 'CD-Pipeline', parameters: [string(name: 'IMAGE_NAME', value: env.IMAGE_NAME)]
                     }
                 }
             }
