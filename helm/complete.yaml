@@ -16,7 +16,7 @@ spec:
     spec:
        containers:
        - name: jforjava
-         image: vishv3432/my_first_java_app:12
+         image: vishv3432/my_first_java_app:4
          ports:
          - containerPort: 8080
 
