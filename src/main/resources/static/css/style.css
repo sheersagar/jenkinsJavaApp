@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #25d49a;
+    background-color: #aeb6b3;
     font-family: Arial, sans-serif;
 }
 
@@ -43,7 +43,7 @@ body {
 
 /* Update the YouTube icon color to red */
 .youtube {
-    color: red;
+    color: rgb(19, 6, 204);
 }
 
 /* Update the GitHub icon color to black */
