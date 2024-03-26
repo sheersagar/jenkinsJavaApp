@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_sheersagar_jenkinsJavaApp_1711462002999-pr-trigger-input-set
+  identifier: Build_sheersagar_jenkinsJavaApp_1711462002999prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: JavaApp
+  pipeline:
+    identifier: Build_sheersagar_jenkinsJavaApp_1711462002999
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
