@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_sheersagar_jenkinsJavaApp_1711462002999-push-trigger-input-set
+  identifier: Build_sheersagar_jenkinsJavaApp_1711462002999pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: JavaApp
+  pipeline:
+    identifier: Build_sheersagar_jenkinsJavaApp_1711462002999
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
