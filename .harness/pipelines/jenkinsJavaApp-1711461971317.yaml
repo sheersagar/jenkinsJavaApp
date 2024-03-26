@@ -1,0 +1,33 @@
+pipeline:
+  name: Build jenkinsJavaApp
+  identifier: Build_sheersagar_jenkinsJavaApp_1711462002999
+  projectIdentifier: JavaApp
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1699831298674
+        repoName: sheersagar/jenkinsJavaApp
+        build: <+input>
